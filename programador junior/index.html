@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Menino de Alepo que Pintava a Guerra</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco */
+        }
+        .swiper-container {
+            width: 100%;
+            height: 600px;
+            position: relative;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            filter: brightness(50%);
+            transition: filter 0.5s ease;
+        }
+        .swiper-slide:hover img {
+            filter: brightness(40%);
+        }
+        .slide-content {
+            position: relative;
+            z-index: 10;
+            padding: 30px;
+            border-radius: 15px; /* Bordas arredondadas */
+            max-width: 80%;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            border: 2px solid transparent; /* Borda invisível */
+            background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente preto */
+        }
+        .swiper-slide-active .slide-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #FF0000; /* Vermelho para o título */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            animation: text-appear 1s ease-out;
+        }
+        .slide-content p {
+            font-family: 'Lora', serif;
+            font-size: 22px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            margin: 0 auto;
+            animation: text-appear 1.5s ease-out;
+        }
+        @keyframes text-appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #FF0000; /* Vermelho para botões de navegação */
+        }
+        .swiper-pagination-bullet {
+            background: #FF0000; /* Vermelho para a paginação */
+        }
+        .swiper-control-buttons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
+        .swiper-button-pause, .swiper-button-play {
+            background: #FF0000; /* Vermelho para botões de controle */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .swiper-button-pause:hover, .swiper-button-play:hover {
+            background: #333;
+            color: #FF0000;
+        }
+        .swiper-button-play {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slider principal -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://tse3.mm.bing.net/th/id/OIG1.bjbfONNF0LT7V.tkM0T6?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Introdução a Adam e sua família">
+                <div class="slide-content">
+                    <h2>Introdução a Adam e sua família</h2>
+                    <p>
+                        Adam é um adolescente autista de 14 anos que vive em Alepo, Síria. Ele mora com seus irmãos mais velhos e sua irmã mais nova, Yasmine. A mãe faleceu e o pai está ausente, deixando o irmão mais velho, Isa, como cuidador principal. Adam, com sua mente singular, enxerga o mundo de maneira diferente, o que lhe confere uma perspectiva única sobre os acontecimentos ao seu redor. Sua irmã Yasmine é sua grande amiga e protetora, enquanto Isa luta para manter a família unida e segura. Em meio ao caos crescente em Alepo, a família tenta manter uma semblante de normalidade, mas a ausência dos pais pesa sobre todos. Cada dia é uma luta para encontrar alimentos e água, mas o amor e a resiliência mantêm a esperança viva.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://tse2.mm.bing.net/th?id=OIG1.XRiDYBFwMKU.Y6aCNu.g&pid=ImgGn" alt="O início da guerra civil síria">
+                <div class="slide-content">
+                    <h2>O início da guerra civil síria</h2>
+                    <p>
+                        A vida pacífica da família é interrompida pelo início do conflito em Alepo. Adam usa sua arte para expressar suas emoções e entender o caos ao seu redor. A família enfrenta dificuldades crescentes, como escassez de alimentos e bombardeios. Os sons das explosões e os gritos de medo são constantes, e a família é forçada a se esconder em abrigos improvisados. As ruas de Alepo, antes cheias de vida, agora estão desertas e destruídas. Adam encontra consolo em seus desenhos, retratando a destruição, mas também a esperança de dias melhores. A comunidade, outrora unida, está desmoronando sob a pressão da guerra. Apesar disso, há momentos de solidariedade e apoio mútuo, onde vizinhos compartilham o pouco que têm. Cada dia traz novos desafios, mas também novas oportunidades de encontrar beleza em meio ao caos.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://tse1.mm.bing.net/th?id=OIG2.WiwxeWTxhJd0S3Aw3AMK&pid=ImgGn" alt="Trauma e perda">
+                <div class="slide-content">
+                    <h2>Trauma e perda</h2>
+                    <p>
+                        A irmã de Adam, Yasmine, é sequestrada por soldados. A família decide fugir de Alepo em busca de segurança. Durante a fuga, enfrentam perigos e perdas adicionais. A captura de Yasmine deixa uma ferida profunda na família, especialmente em Adam, que não compreende por que sua irmã foi levada. Isa, agora mais determinado do que nunca, lidera a família em uma jornada perigosa através de zonas de conflito. Ao longo do caminho, encontram outros refugiados com histórias semelhantes de dor e perda. Cada encontro é um lembrete da brutalidade da guerra, mas também da resiliência humana. A jornada é longa e árdua, com cada passo em direção ao desconhecido carregando um misto de esperança e medo.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://tse1.mm.bing.net/th?id=OIG2.ZEijA4zsRI9KR4yT5gwF&pid=ImgGn" alt="Jornada e esperança">
+                <div class="slide-content">
+                    <h2>Jornada e esperança</h2>
+                    <p>
+                        Adam e os irmãos restantes empreendem uma perigosa viagem para fora da Síria. Eles enfrentam desafios físicos e emocionais durante o percurso. O livro termina com a família chegando a um campo de refugiados, com um futuro incerto, mas com esperança. A resiliência e o espírito de Adam e seus irmãos são a chave para enfrentar os desafios que ainda virão, enquanto olham para frente com esperança e determinação. Em cada parada, encontram pequenos momentos de bondade e ajuda de estranhos, que oferecem abrigo e comida. A jornada é marcada por momentos de desespero e pequenos triunfos, cada um trazendo um passo mais perto de segurança. Finalmente, a família chega a um campo de refugiados, com um futuro incerto, mas com uma nova esperança de reconstruir suas vidas. A resiliência e o espírito de Adam e seus irmãos são a chave para enfrentar os desafios que ainda virão, enquanto olham para frente com esperança e determinação.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adiciona os botões de navegação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Adiciona a paginação -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Adiciona os botões de controle -->
+        <div class="swiper-control-buttons">
+            <button class="swiper-button-pause">Pausar</button>
+            <button class="swiper-button-play">Play</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            on: {
+                slideChangeTransitionStart: function () {
+                    const activeSlide = document.querySelector('.swiper-slide-active');
+                    const slideContent = activeSlide.querySelector('.slide-content');
+                    slideContent.classList.add('fade-in');
+                    setTimeout(() => {
+                        slideContent.classList.remove('fade-in');
+                    }, 500);
+                }
+            }
+        });
+
+        const pauseButton = document.querySelector('.swiper-button-pause');
+        const playButton = document.querySelector('.swiper-button-play');
+
+        pauseButton.addEventListener('click', () => {
+            swiper.autoplay.stop();
+            pauseButton.style.display = 'none';
+            playButton.style.display = 'block';
+        });
+
+        playButton.addEventListener('click', () => {
+            swiper.autoplay.start();
+            playButton.style.display = 'none';
+            pauseButton.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
